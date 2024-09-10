@@ -1,0 +1,858 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syncopate:wght@400;700&display=swap');
+
+
+:root {
+    --primary-color: #f5b754;
+    --primary-color-dark: #d6a04a;
+    --text-dark: #15191d;
+    --text-light: #737373;
+    --extra-light: #e5e5e5;
+    --white: #ffffff;
+    --max-width: 1200px;
+    --header-font: "Syncopate", sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+ 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-image: url('./assets/header-bg.png');
+    /* background-position: center ; */
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    z-index: 100;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 7%;
+    position: relative;
+    margin-top: 5px;
+}
+
+header nav .logo a {
+    font-family: var(--header-font);
+    text-transform: uppercase;
+    margin-top: 5px;
+    color: var(--text-dark);
+    font-weight: bold;
+    font-size: 30px;
+    display: block;
+    transition: all 0.4s;
+}
+
+header nav .logo a:hover {
+
+    transform: scale(1.1);
+
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transform: all 0.5s;
+}
+
+
+header nav ul li a {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 18px;
+    transform: all 0.3s;
+    text-transform: capitalize;
+
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+header nav .list {
+    color: var(--white);
+    font-size: 20px;
+    cursor: pointer;
+    display: none
+}
+
+header nav .button button {
+    outline: none;
+    padding: 12px;
+    border: none;
+    background: var(--primary-color);
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+header nav .button button:hover {
+    cursor: pointer;
+    background: var(--primary-color-dark);
+    color: var(--white);
+}
+
+
+.landing {
+    padding-top: 100px;
+    background: red;
+    width: 100%;
+    height: fit-content;
+    background-image: url('./assets/header-bg.png');
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    /* overflow: hidden; */
+
+}
+
+.landing h1 {
+    font-family: var(--header-font);
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+
+}
+
+.landing .time {
+    background: var(--white);
+    margin-inline: 10%;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.landing .time .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.landing .time .inputs label {
+    text-transform: capitalize;
+}
+
+.landing .time .inputs input {
+    outline: none;
+    border: none;
+
+
+}
+
+.landing .time .inputs input::placeholder {
+    text-transform: capitalize;
+    font-size: 17px;
+}
+
+.landing i {
+    background: var(--text-dark);
+    color: var(--white);
+    padding: 13px;
+    font-weight: bold;
+    border-radius: 5px;
+
+}
+
+.landing i:hover {
+    background: var(--primary-color);
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+.landing .img {
+    padding: 20px 10%;
+    z-index: 1;
+    background: var(--primary-color);
+    position: relative;
+
+}
+
+
+.landing .img img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.landing .img .scroll-dowmn {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.landing .img .scroll-dowmn:hover {
+    scale: 1.1;
+}
+
+.landing .img .scroll-dowmn i {
+    background: var(--primary-color);
+    padding: 20px 10px;
+    border-radius: 100px;
+    border: 8px solid white;
+}
+
+@media (min-width:1000px) {
+    .landing .time {
+        min-width: 800px;
+        margin-inline: auto;
+    }
+}
+
+
+.wide-range {
+    padding-top: 100px;
+}
+
+.wide-range h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-family: var(--header-font);
+    margin-block: 30px;
+}
+
+.wide-range .cars-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10%;
+}
+
+.wide-range .cars-section .car-cards {
+    position: relative;
+    font-family: var(--header-font);
+    color: var(--white);
+    flex-basis: 400px;
+    flex-grow: 1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.wide-range .cars-section .car-cards img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 1px black;
+}
+
+.wide-range .cars-section .car-cards img:hover {
+    scale: 1.1;
+}
+
+.wide-range .cars-section .car-cards .car-content {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.wide-range .cars-section .car-cards .car-content h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+.wide-range .cars-section .car-cards .car-content i {
+    border: 3px solid white;
+    padding: 6px;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+
+.wide-range .cars-section .car-cards .car-content i:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    gap: 40px;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 10%;
+}
+
+.hero .left-section h1 {
+    font-family: var(--header-font);
+    text-transform: uppercase;
+    font-size: 40px;
+
+}
+
+.hero .left-section p {
+    color: rgba(0, 0, 0, 0.525);
+    font-size: 17px;
+    margin-block: 20px;
+}
+
+.hero .left-section button {
+    outline: none;
+    border: none;
+    background: var(--text-dark);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.hero .left-section button:hover {
+    cursor: pointer;
+    color: var(--text-dark);
+    background: var(--primary-color);
+}
+
+.hero .right-section {
+    width: 180%;
+}
+
+.hero .right-section img {
+    object-fit: cover;
+    width: 100%;
+}
+
+
+.select_container {
+    padding-top: 5rem;
+    margin-bottom: 5rem;
+    background-image: url("assets/select-bg.png");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.select_container .section_header {
+    max-width: 600px;
+    margin-inline: auto;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-slide {
+    max-width: 900px;
+}
+
+
+.select_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.select_card img {
+    max-width: 800px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.5));
+}
+
+.select_card .select_info {
+    max-width: 600px;
+    margin-inline: auto;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.select_card.show_info .select_info {
+    display: flex;
+}
+
+.select_info_card {
+    text-align: center;
+}
+
+.select_info_card>span {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 5px 15px;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    background-color: var(--white);
+    border-radius: 100%;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.select_info_card h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: var(--header-font);
+    color: var(--text-dark);
+}
+
+.select_info_card h4 span {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.select_form {
+    max-width: 750px;
+    margin-inline: auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background-color: var(--white);
+    transform: translateY(50%);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.select_price {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-family: var(--header-font);
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.select_price span {
+    font-size: 3rem;
+    line-height: 3rem;
+    color: var(--text-dark);
+}
+
+.select_price span:not(#select-price) {
+    font-weight: 400;
+}
+
+.select_btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.select_btns .btn {
+    min-width: 135px;
+    outline: none ;
+    border:none ;
+    padding: 15px;
+    background: var(--text-dark);
+    color: var(--white);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.select_btns .btn:nth-child(2) {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+.stories {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+}
+
+.stories h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: var(--header-font);
+}
+
+.stories .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    padding: 20px;
+}
+
+.stories .container .card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    max-width: 350px;
+}
+
+.stories .container .card div {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    gap: 10px;
+    border-bottom: 2px solid var(--text-dark);
+    padding-bottom: 10px;
+    width: 100%;
+    
+}
+
+.stories .container .card div h3 {
+    border-right: 1px solid var(--text-dark);
+    padding-right: 5px;
+    font-size: 35px;
+    
+}
+.stories .container .card div p {
+    color: rgba(0, 0, 0, 0.566);
+    font-size: 17px;
+}
+
+.stories .container .card h2 {
+    font-size: 30px;
+    font-family: var(--header-font);
+    height: 100px;
+}
+
+.stories .container .card p {
+    color: rgba(0, 0, 0, 0.564);
+    font-size: 17px;
+
+}
+
+.stories .container .card img {
+    width: 300px;
+    object-fit: cover;
+}
+
+.banners {
+    padding-block: 5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banners div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    width: max-content;
+    animation: tanslate 5s linear infinite;
+
+}
+
+@keyframes tanslate {
+    to {
+        transform: translateX(calc(-20% - 4rem));
+    }
+}
+.banners div  img {
+    width: 100px;
+}
+
+.car-rental {
+    margin-top: 4rem;
+    margin-bottom: -200px;
+    max-width: 80%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 50px;
+    background: var(--primary-color);
+    position: relative;
+    height: 500px;
+    border-radius: 20px;
+
+}
+
+.car-rental div[class=""] {
+    width: 60%;
+}
+
+.car-rental div h1 {
+    font-size: 50px;
+    font-family: var(--header-font);
+    margin-bottom: 10px;
+    width: 350px;
+}
+
+.car-rental div div img {
+    width: 150px;
+    margin-inline: 5px;
+}
+.car-rental .bottom-img {
+    position: absolute;
+    bottom: 0;
+    right: 5rem;
+    width: 40%;
+}
+
+footer {
+    background: var(--text-dark);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 300px;
+    padding-bottom: 100px;
+}
+
+footer .container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+}
+footer .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+footer .top h1 {
+    font-size: 40px;
+    font-weight: bold;
+    width: 50%;
+    font-weight: bold;
+    font-family: var(--header-font);
+    
+}
+
+footer .top .top-right {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+}
+
+footer .top .top-right .input {
+    height: 35px;
+    max-width: 300px;
+}
+
+footer .top .top-right input {
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border-bottom: 2px solid var(--extra-light);
+    color: var(--extra-light);
+    font-size: 20px;
+}
+footer .top .top-right i {
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+    
+}
+
+footer .top .top-right i:hover {
+    color: var(--text-dark);
+}
+
+footer .bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+   
+}
+
+footer .bottom div[class] {
+    flex-basis: 200px;
+}
+
+
+footer .bottom .last-div div {
+    flex-direction: row;
+    gap: 30px;
+}
+
+footer .bottom .last-div div i {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+
+footer .bottom .last-div div i:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+footer .bottom h1 {
+    margin-bottom: 15px;
+}
+footer .bottom div div {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+footer .bottom div div a {
+    color:rgba(199, 199, 199, 0.749);
+    transition: 0.2s;
+}
+
+footer .bottom div div a:hover {
+    color:var(--white)
+}
+@media (max-width:805px) {
+    footer .top  {
+        flex-direction: column;
+        gap: 30px;
+    }
+    footer .top h1 {
+        width: 100%;
+    }
+}
+@media (max-width:1008px) {
+    .car-rental .bottom-img {
+        display: none;
+    }
+    .car-rental {
+        justify-content: center;
+        padding-inline: 10px;
+    }
+    .car-rental div[class=""] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .car-rental div h1 {
+        text-align: center;
+        max-width: 100%;
+        font-size: 30px;
+    }
+    .car-rental div[class=""] {
+        width: 100%;
+    }
+    .car-rental div div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (max-width:650px) {
+    header {
+        background: var(--primary-color);
+        
+    }
+
+    header nav .logo a {
+        color: var(--white);
+    }
+
+    header nav ul li a {
+        color: var(--white);
+    }
+
+    header nav ul li a:hover {
+        color: var(--text-dark);
+    }
+
+    header nav .list {
+        display: block;
+    }
+
+    header nav ul {
+        position: absolute;
+        top: 40px;
+        flex-direction: column;
+        background: var(--primary-color);
+        width: calc(100% + 80px);
+        margin-left: -40px;
+        padding: 40px 0;
+        margin-top: -700px;
+        transition: all 0.4s;
+    }
+
+    header nav ul.open {
+        margin-top: 0;
+    }
+
+    header nav .button {
+        display: none;
+    }
+
+    .wide-range .cars-section {
+        padding: 3%;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 3%;
+    }
+
+    .hero .right-section {
+        width: 100%;
+        margin-inline: auto;
+
+    }
+
+    .hero .left-section h1 {
+        text-align: center;
+    }
+
+    .select_card img {
+        width: 90%;
+    }
+
+
+}
